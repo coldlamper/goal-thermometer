@@ -1,3 +1,4 @@
+$(document).on('ready', {
 $.fn.thermometer = function (current) {
   $('.current').text(current);
 	var $therm = this;
@@ -29,8 +30,9 @@ $.fn.thermometer = function (current) {
 	}
 
 }
-let goal = '$15,000'
-let current = '$12,000'
+goal = '$15,000'
+current = '$12,000'
 $('.goal').text(goal);
 $('#thermometer').thermometer(current);
+});
 
