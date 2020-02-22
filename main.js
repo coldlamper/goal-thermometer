@@ -34,5 +34,19 @@ $( document ).ready(function() {
 	var current = '$12,000'
 	$('.goal').text(goal);
 	$('#thermometer').thermometer(current);
+	
+	var newGoal = '';
+	$(document).on("keypress", function (e) {
+		if (e.charCode == 78 || e.charCode == 110) {
+			newGoal = '';
+			$('#thermometer').thermometer('$0');
+		}
+
+		if (e.charCode < 48 || e.charCode > 57) {
+			return;
+		}
+		newGoal+=(e.charCode-48); 
+		$('#thermometer').thermometer('$' + newGoal.replace(/(\d)(?=(\d{3})+(?!\d))/g, '$1,'));
+  	});
 });
 
