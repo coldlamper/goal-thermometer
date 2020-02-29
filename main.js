@@ -30,8 +30,8 @@ $( document ).ready(function() {
 		}
 
 	}
-	var goal = '$15,000'
-	var current = '$7,500'
+	var goal = '$7,500'
+	var current = '$2,000'
 	$('.goal').text(goal);
 	$('#thermometer').thermometer(current);
 	
